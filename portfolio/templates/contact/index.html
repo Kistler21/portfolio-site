@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Kistler Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}" />
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+
+      <!-- Left elements -->
+      <div class="d-flex">
+        <a class="navbar-brand" href="#">Michael Kistler</a>
+        <!-- Linkedin -->
+        <a class="btn btn-primary btn-floating me-1" style="background-color: #0082ca"
+          href="https://linkedin.com/in/mikekistler" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Github -->
+        <a class="btn btn-primary btn-floating me-1" style="background-color: #333333"
+          href="https://github.com/Kistler21" role="button"><i class="fab fa-github"></i></a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarScroll"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-info text-light">
+      <img src="{{ url_for('static', filename='media/headshot.png') }}" alt="headshot"
+        class="img-fluid rounded-circle img-thumbnail mb-2">
+      <h1 class="mb-3 display-1">Michael Kistler</h1>
+      <h2 class="mb-3 display-6">Software Engineer</h4>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="bg-light">
+    <div class="container-md">
+      <h2 class="display-3 text-center">About Me</h2>
+      <div class="row justify-content-center text-left">
+        <div class="col-md-4">
+          <p>
+            I am an aspiring <strong>software engineer</strong> still working on earning my computer science degree from
+            Oregon State
+            University.
+          </p>
+          <p>
+            Previously, I earned a degree in <strong>mechanical engineering</strong> from Purdue University.
+          </p>
+          <p>
+            I am set to earn my CS degree in <strong>December 2021</strong>.
+          </p>
+          <p>
+            Currently, I am searching for an <strong>internship or entry-level</strong> position.
+          </p>
+          <p>
+            Some of my hobbies in my free time include <strong>playing golf</strong>,
+            <strong>listening to podcasts</strong>, and <strong>watching sports</strong>.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <p>
+            How I differ from other entry-level applicants:
+          </p>
+          <ul>
+            <li class="mb-1">
+              <strong>Previous Engineering Experience</strong>:
+              I have worked as a product engineer since April 2019. This has given me valuable insight into the level of
+              work required in an engineering environment.
+            </li>
+            <li class="mb-1">
+              <strong>Customer Relations</strong>:
+              I have experience directly working with clients developing products to meet
+              customer requirements.
+            </li>
+            <li class="mb-1">
+              <strong>Problem Solving</strong>:
+              My previous degree in mechanical engineering and projects below demonstrate that I am a highly capable
+              problem solver and possess strong critical thinking abilities.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-info text-light">
+    <div class="container-md">
+      <h2 class="display-3 text-center">Projects</h2>
+
+      <div class="row justify-content-center text-left">
+        <!-- Sudoku -->
+        <div class="col-md-5">
+          <p class="display-6 mb-1"><a href="https://github.com/Kistler21/pygame-sudoku" target="_blank"
+              class="link-light text-decoration-underline">Pygame Sudoku</a>
+          </p>
+          <p class="mb-1"><em>Utilized:</em> Python, Pygame, GUI Development, Algorithm Design</p>
+          <p class="mb-1">
+            Playable game of Sudoku with a built-in solver that visualizes the algorithm being used for the solve.
+            <img src="{{ url_for('static', filename='media/solve_start.gif') }}" alt="Sudoku Solver"
+              style="width: 100%">
+          </p>
+        </div>
+
+        <!-- Museum Database -->
+        <div class="col-md-5 text-end">
+          <p class="display-6 mb-1"><a href="https://kistler-database-project.herokuapp.com/" target="_blank"
+              class="link-light text-decoration-underline">Database App</a>
+          </p>
+          <p class="mb-1"><em>Utilized:</em> JavaScript, Node.js, SQL, MariaDB, HTML, Bootstrap CSS, Heroku</p>
+          <p class="mb-1">
+            Demo museum database app that has INSERT, DELETE, UPDATE, and ADD functionlity for all
+            entities.
+            <img src="{{ url_for('static', filename='media/database.gif') }}" alt="Database App" style="width: 100%">
+          </p>
+        </div>
+
+      </div>
+      <div class="row justify-content-center text-left">
+        <!-- smallsh -->
+        <div class="col-md-5">
+          <p class="display-6 mb-1"><a href="https://github.com/Kistler21/smallsh" target="_blank"
+              class="link-light text-decoration-underline">smallsh</a>
+          </p>
+          <p class="mb-1"><em>Utilized:</em> C, Forked Processes, Signal Handling, Bash</p>
+          <p class="mb-1">
+            Linux shell built with C that has built in commands for exit, cd, and status while it
+            forks a child branch using bash for all other commands.
+          <pre class="bg-dark" style="height: 300px"><code class="p-o">
+            $ smallsh
+            : ls
+            junk   smallsh    smallsh.c
+            : ls &gt junk
+            : status
+            exit value 0
+            : cat junk
+            junk
+            smallsh
+            smallsh.c
+            : wc &lt junk &gt junk2
+            : wc &lt junk
+                  3       3      23
+            : test -f badfile
+            : status
+            exit value 1
+            : wc &lt badfile
+            cannot open badfile for input
+            : status
+            exit value 1
+            : badfile
+            badfile: no such file or directory
+            : sleep 5
+            ^Cterminated by signal 2
+            : status &
+            terminated by signal 2
+            : sleep 15 &
+            background pid is 4923
+            : ps
+              PID TTY          TIME CMD
+            4923 pts/0    00:00:00 sleep
+            4564 pts/0    00:00:03 bash
+            4867 pts/0    00:01:32 smallsh
+            4927 pts/0    00:00:00 ps
+            :
+            : # that was a blank command line, this is a comment
+            :
+            background pid 4923 is done: exit value 0
+            : # the background sleep finally finished
+            : sleep 30 &
+            background pid is 4941
+            : kill -15 4941
+            background pid 4941 is done: terminated by signal 15
+            : pwd
+            /nfs/stak/faculty/b/brewsteb/CS344/prog3
+            : cd
+            : pwd
+            /nfs/stak/faculty/b/brewsteb
+            : cd CS344
+            : pwd
+            /nfs/stak/faculty/b/brewsteb/CS344
+            : echo 4867
+            4867
+            : echo $$
+            4867
+            : ^C^Z
+            Entering foreground-only mode (& is now ignored)
+            : date
+            Mon Jan  2 11:24:33 PST 2017
+            : sleep 5 &
+            : date
+            Mon Jan  2 11:24:38 PST 2017
+            : ^Z
+            Exiting foreground-only mode
+            : date
+            Mon Jan  2 11:24:39 PST 2017
+            : sleep 5 &
+            background pid is 4963
+            : date
+            Mon Jan 2 11:24:39 PST 2017
+            : exit $
+          </code></pre>
+          </p>
+        </div>
+
+        <!-- Content Generator -->
+        <div class="col-md-5">
+          <p class="display-6 mb-1"><a href="https://github.com/Kistler21/content-generator" target="_blank"
+              class="link-light text-decoration-underline">Content Generator</a>
+          </p>
+          <p class="mb-1"><em>Utilized:</em> Python, Tkinter, GUI Development</p>
+          <p class="mb-1">
+            GUI application that queries the Wikipedia page of a primary keyword and searches for a
+            paragraph containing the primary keyword and a secondary keyword.
+            <img src="{{ url_for('static', filename='media/content_generator.gif') }}" alt="Content Generator"
+              style="width: 100%">
+          </p>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="bg-light">
+    <div class="container-md">
+      <h2 class="display-3 text-center">Education</h2>
+
+      <!-- Oregon State -->
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-left">
+          <p class="display-6 mb-1">Oregon State University</p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-end mb-1">September 2019 - Decemeber 2021</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-left">
+        <div class="col-md-8">
+          <p class="mb-1"><em>Computer Science, Bachelor of Science</em></p>
+          <p class="mb-1"><strong>GPA</strong>: 4.0 / 4.0</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-left">
+        <div class="col-md-8">
+          <p><strong>Classes Taken</strong>:</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <ul>
+            <li class="mb-1">Software Engineering I</li>
+            <li class="mb-1">Operating Systems I</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li class="mb-1">Analysis of Algorithms</li>
+            <li class="mb-1">Intro to Computer Networks</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li class="mb-1">Data Structures</li>
+            <li class="mb-1">Computer Architecture & Assembly Language</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li class="mb-1">Intro to Databases</li>
+            <li class="mb-1">Web Development</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Purdue -->
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4 text-left">
+          <p class="display-6 mb-1">Purdue University</p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-end mb-1">2014 - 2018</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-left">
+        <div class="col-md-8">
+          <p><em>Mechanical Engineering, Bachelor of Science</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-info">
+    <div class="container-md">
+      <h2 class="display-3 text-center text-light">Contact</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form action="{{ url_for('contact.contactme') }}" method="post">
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"
+                required>
+              <label for="first_name">First name</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+              <label for="last_name">Last name</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="company">
+              <label for="phone">Phone (Optional)</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="company" name="company" placeholder="123-456-7890">
+              <label for="phone">Company (Optional)</label>
+            </div>
+            <div class="form-floating mb-2">
+              <textarea class="form-control" placeholder="Details" id="details" name="details"
+                style="height: 100px"></textarea>
+              <label for="details">Details (Optional)</label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center text-lg-start">
+    <div class="text-center p-3">
+      <p class="m-0">Michael Kistler</p>
+      <p class="m-0">michael@michaelkistler.net</p>
+      <a class="btn btn-primary btn-floating me-1" style="background-color: #0082ca"
+        href="https://linkedin.com/in/mikekistler" role="button"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+
+</body>
+
+</html>
