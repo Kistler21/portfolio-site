@@ -1,4 +1,5 @@
 import os
+import json
 
 from flask import Flask
 from flask_mail import Mail
@@ -8,10 +9,13 @@ mail = Mail()
 
 
 def create_app(test_config=None):
+    with open('/etc/portfolio_config.json') as config_file:
+        config = json.load(config_file)
+
     # Create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        SECRET_KEY=***REMOVED***,
+        SECRET_KEY=config.get('SECRET_KEY'),
         DATABASE=os.path.join(app.instance_path, 'portfolio.sqlite'),
     )
 
@@ -19,8 +23,8 @@ def create_app(test_config=None):
     app.config['MAIL_PORT'] = 465
     app.config['MAIL_USE_TLS'] = False
     app.config['MAIL_USE_SSL'] = True
-    app.config['MAIL_USERNAME'] = 'michael@michaelkistler.net'
-    app.config['MAIL_PASSWORD'] = ***REMOVED***
+    app.config['MAIL_USERNAME'] = config.get('EMAIL_USER')
+    app.config['MAIL_PASSWORD'] = config.get('EMAIL_PASS')
     mail.init_app(app)
 
     if test_config is None:
